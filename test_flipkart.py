@@ -61,8 +61,7 @@ def test_cont():
         print("We found " + m34.text)
 
     except:
-        pass
-    #     print('We could not find "SAMSUNG Galaxy M34 5G without charger (Prism Silver, 128 GB)"')
+        print('We could not find "SAMSUNG Galaxy M34 5G without charger (Prism Silver, 128 GB)"')
 
 def test_cont2():
 

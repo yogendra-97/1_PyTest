@@ -13,6 +13,6 @@ def test_Apple(browser):
 
     driver=browser
     driver.get("https://www.google.com/")
-    driver.find_element(By.ID, "APjFqb").send_keys('Apple 2')
+    driver.find_element(By.ID, "APjFqb").send_keys('google')
     time.sleep(2)
     driver.quit()

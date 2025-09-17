@@ -12,7 +12,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 def test_Apple(browser):
 
     driver=browser
-    driver.get("https://www.google.com/")
+    driver.get("https://www.google.com")
     driver.find_element(By.ID, "APjFqb").send_keys('main-> Automation')
     time.sleep(2)
     driver.quit()

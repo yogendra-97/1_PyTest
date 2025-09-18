@@ -13,6 +13,6 @@ def test_Apple(browser):
 
     driver=browser
     driver.get("https://www.google.com/")
-    driver.find_element(By.ID, "APjFqb").send_keys('Automation-Google Branch')
+    driver.find_element(By.ID, "APjFqb").send_keys('Random')
     time.sleep(2)
     driver.quit()

@@ -75,8 +75,8 @@ def test_cont2():
         driver.close()
 
     except:
-        pass
-    #     print('We could not find "SAMSUNG M15 (Blue Topaz, 128 GB)"')
+        # pass
+        print('We could not find "SAMSUNG M15 (Blue Topaz, 128 GB)"')
 
 
     fkh = driver.find_element(By.CLASS_NAME, "W5mR4e").click()
@@ -84,8 +84,8 @@ def test_cont2():
     try:
         driver.find_element(By.CLASS_NAME, "_30XB9F").click()
     except:
-        pass
-    #     print("Login Page closed")
+        # pass
+        print("Login Page closed")
 
 def test_cont3():
 
@@ -98,7 +98,7 @@ def test_cont3():
         driver.close()
 
     except:
-        pass
-    #     print('We could not complete any of the actions, hence closing the browser..!!!')
+        print('We could not complete any of the actions, hence closing the browser..!!!')
+        time.slepp(1)
+        driver.quit()
 
-    driver.quit()

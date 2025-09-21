@@ -9,7 +9,7 @@
 import pytest
 
 def test_program():
-    print(" Test case passed")
+    print("Test case passed")
 
 @pytest.mark.test
 

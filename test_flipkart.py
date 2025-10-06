@@ -99,6 +99,6 @@ def test_cont3():
 
     except:
         print('We could not complete any of the actions, hence closing the browser..!!!')
-        time.slepp(1)
+        time.sleep(1)
         driver.quit()
 

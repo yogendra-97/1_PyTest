@@ -30,7 +30,7 @@ def read_excel_data(file_path, searchTerm, colName, new_value):
     book.save(file_path)
 
 
-file_path = "/Users/rahulshetty/downloads/download.xlsx"
+file_path = "/Users/download.xlsx"
 driver = webdriver.Chrome()
 
 driver.implicitly_wait(5)  # Set implicit wait for 5 seconds
@@ -53,7 +53,7 @@ toast_text = driver.find_element(*toast_locator).text
 print("Toast text:", toast_text)
 assert toast_text == "Updated Excel Data Successfully."
 
-# Wait for toast to disappear
+# Wait for the toast to disappear
 WebDriverWait(driver, 10).until(EC.invisibility_of_element_located(toast_locator))
 
 # Get column ID

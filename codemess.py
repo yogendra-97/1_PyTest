@@ -31,3 +31,5 @@ for x in range(y):
 time.sleep(4)
 #
 driver.close()
+
+dropdown= driver.find_element(By.XPATH, "").is_selected()

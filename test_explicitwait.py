@@ -7,8 +7,9 @@ from selenium.webdriver.chrome.service import Service
 #-- Chrome
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
-#['Cucumber - 1 Kg', 'Raspberry - 1/4 Kg', 'Strawberry - 1/4 Kg']
+
 
 def test_url(browser):
     driver = browser
@@ -41,6 +42,7 @@ def test_total(browser):
     totalAmount = int(driver.find_element(By.CSS_SELECTOR, ".totAmt").text)
 
     assert total == totalAmount
+    raise 
 
 def test_remaining(browser):
     driver = browser
@@ -50,11 +52,11 @@ def test_remaining(browser):
     wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR,".promoInfo")))
     print(driver.find_element(By.CLASS_NAME,"promoInfo").text)
 
+    dropdown = Select(driver.find_element("id", "dropdown_id"))
+    dropdown.select_by_index(0)
 
-
-
-
-
+    standby= WebDriverWait(driver, 10)
+    standby.until(expected_conditions.presence_of_element_located(By.XPATH, "//button[text()='PROCEED TO CHECKOUT']")).click()
 
 
 
